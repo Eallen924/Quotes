@@ -1,0 +1,23 @@
+<div class='signup_container'>
+
+  <h1>Welcome</h1>
+  <%if @errors%>
+  <%= erb :error, locals:{errors: @errors} %>
+  <% end %>
+
+
+  <div class='login'>
+    <form name='login' action="/login" method='post'>
+      <h2>login:</h2>
+      <div class="login_row1">
+        <label> Username: </label><input type='text' name='user[email]' placeholder="Username">
+      </div>
+      <div class="login_row2">
+        <label> Password: </label><input type='password' name='user[password]' placeholder="Password">
+      </div>
+      <div>
+        <input class="button" type='submit' value='Log me in' id='log_in'>
+      </div><br>
+    </form>
+  </div>
+</div>
