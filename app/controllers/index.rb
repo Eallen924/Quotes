@@ -19,6 +19,7 @@ end
 
 post '/quote/get' do
   @quote = Quote.all.sample
+  p @quote
   erb :_quote, layout: false
 end
 

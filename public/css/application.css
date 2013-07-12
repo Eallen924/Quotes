@@ -5,7 +5,6 @@
   background-image:url('/img/bg.jpg');
   background-size: cover;
   z-index: -9999;
-  opacity: .5;
 }
 
 .signup_container {
@@ -131,16 +130,26 @@ h2 {
 #rotating-item-wrapper {
   width: 980px;
   height: 347px;
+
 }
 
 .rotating-item {
   margin-top: 25% ;
   margin-left: 25%;
+  padding: 10px 10px 10px 20px;
   font-family: times;
   width: 80% ;
   font-size: 30px;
   font-style: italic;
   color: black;
-
+  border-radius: 20px;
+  box-shadow: rgba(0,0,0,0.4) 0px 2px 3px, inset rgba(0,0,0,0.4) 0px -1px 2px;
+  background-color: rgba(255,255,255,0.7);
 }
 
+.quote_body {
+  margin-top: 15px 15px 15px 15px;
+}
+.quote_author {
+  margin-bottom: 20px auto;
+}

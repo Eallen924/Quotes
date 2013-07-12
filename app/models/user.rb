@@ -1,3 +1,4 @@
+
 class User < ActiveRecord::Base
   attr_accessor :raw_password
   has_many :authors, :through => :favorite_authors
@@ -11,8 +12,8 @@ class User < ActiveRecord::Base
   validates :raw_password, :length => { :minimum => 6 }
 
 
-  def self.authenticate(email, password)
-    user = User.find_by_email(email)
+  def self.authenticate(username, password)
+    user = User.find_by_username(username)
     if user && user.password == password
       user
     else

@@ -18,6 +18,7 @@ $(document).ready(function() { //start after HTML, images have loaded
         $('#rotating-item-wrapper').children(".rotating-item").remove();
         $('#rotating-item-wrapper').html(getCurrentItem());
       }, itemInterval);
+          debugger
     }
   };
   InfiniteRotator.init();

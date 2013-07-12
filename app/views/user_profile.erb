@@ -1,12 +1,12 @@
 <div class="signup_container">
   <div class="user_info">
     <h1>User Information</h1>
-    <h2>Hey <%= @user.username %>! Your information is:</h2>
+    <h2>Hey <%= current_user.username %>! Your information is:</h2>
   </div>
   <p>
-   Username: <%= @user.username %> <br>
-   Email: <%= @user.email %>
-   Birthday: <%= @user.birthday %>
+   Username: <%= current_user.username %> <br>
+   Email: <%= current_user.email %>
+   Birthday: <%= current_user.birthday %>
  </p>
  <a href="/authors">Authors</a>
 </div>

@@ -1,7 +1,5 @@
 post '/create_user' do
-  p params
   @user = User.new(params[:user])
-  p @user
   if @user.save
     session[:user_id] = @user.id
     redirect to '/'
@@ -28,7 +26,7 @@ post '/login' do
 end
 
 get '/logout' do
-  session[:user_id] = nil
+  session.clear
   redirect to '/'
 end
 
