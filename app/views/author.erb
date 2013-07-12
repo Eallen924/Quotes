@@ -1,7 +1,10 @@
-<div class="container">
+<div class="signup_container">
+	<h2><%= @author.name %></h2>
   <ul>
   <% @author.quotes.each do |quote| %>
+  <div class="quote_container">
   <li><%= quote.body %></li>
+  </div>
   <% end %>
 </ul>
 </div>

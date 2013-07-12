@@ -4,5 +4,5 @@ class Quote < ActiveRecord::Base
  has_many :admirers, :class_name => 'User', :dependent => :destroy
 
  validates :author_id, :presence => true
- validates :body, :presence => true  # Remember to create a migration!
+ validates :body, :presence => true, :uniqueness => true
 end

@@ -1,4 +1,3 @@
-
 $(document).ready(function() { //start after HTML, images have loaded
   var InfiniteRotator = {
     init: function() {
@@ -17,10 +16,9 @@ $(document).ready(function() { //start after HTML, images have loaded
       //loop through the items
       var infiniteLoop = setInterval(function(){
         $('#rotating-item-wrapper').children(".rotating-item").remove();
-        $('#rotating-item-wrapper').html(getCurrentItem());             
+        $('#rotating-item-wrapper').html(getCurrentItem());
       }, itemInterval);
     }
   };
   InfiniteRotator.init();
 });
-

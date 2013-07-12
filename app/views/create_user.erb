@@ -8,26 +8,16 @@
 
   <div class='create_user'>
     <form name='create_user' action="/create_user" method='post'>
-      <div class="create_row1">
-        <label> Username: </label>
-        <input type='text' name='user[username]' placeholder="Username" autofocus="" value="<%= @user.username if @user %>">
-      </div>
-      <div class="create_row2">
-        <label> Email: </label><input type='text' name='user[email]' placeholder="Email" value='<%= @user.email if @user %>'>
-      <div class="create_row3">
-        <label> Birthday: </label><input type='birthday' placeholder="Birthday" name='user[birthday]' value='<%= @user.birthday if @user %>'>
-      </div>
-      </div>
-      <div class="create_row4">
-        <label> Password: </label><input type='password' placeholder="Password" name='user[password]'>
-      </div>
-      <div>
-        <input class="button" type='submit' value='Create User!' id='create_user'>
-      </div><br>
-    </form>
-    <div class='login_link'>
 
-      Already a user? Click <a href="/login"> here </a> to login
-    </div>
+      <input id="create_user" type='text' name='user[username]' placeholder="Username" autofocus="" value="<%= @user.username if @user %>"><br>
+
+      <input id="create_user" type='text' name='user[email]' placeholder="Email" value='<%= @user.email if @user %>'><br>
+
+      <input id="create_user" type='date' placeholder="Birthday" name='user[birthday]' value='<%= @user.birthday if @user %>'><br>
+
+      <input id="create_user" type='password' placeholder="Password" name='user[password]'><br>
+
+      <input class="button" type='submit' value='Create User!' id='create_user'><br>
+    </form>
   </div>
 </div>

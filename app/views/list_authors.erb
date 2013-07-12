@@ -1,0 +1,9 @@
+
+<div class="author_container">
+	<h2>Authors</h2>
+  <ul>
+  <% @authors.each do |author| %>
+  <li><a href="/author/<%= author.id %>"><%= author.name %></a></li>
+  <% end %>
+  </ul>
+</div>

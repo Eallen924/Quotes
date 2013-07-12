@@ -12,23 +12,18 @@ post '/create_user' do
 end
 
 get '/create_user' do
-
   @user ||= User.new
   erb :create_user
 end
 
-get '/login' do
-  erb :login
-end
-
 post '/login' do
-  @user = User.authenticate(params[:user][:email], params[:user][:password])
+  @user = User.authenticate(params[:user][:username], params[:user][:password])
   if @user
     session[:user_id] = @user.id
     redirect to "/user_profile/#{@user.id}"
   else
     @errors = ["Invalid login details"]
-    erb :login
+    erb :user_profile
   end
 end
 
