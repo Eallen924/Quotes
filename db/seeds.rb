@@ -16,7 +16,7 @@ end
 
 def create_quotes
 	@quotes_hash.each do |hash|
-		author_obj = Author.find_or_create_by_name(hash[:author])
+		author_obj = Author.find_or_create_by(name: hash[:author])
 		Quote.create(:body => hash[:quote], :author_id => Author.find_by_name(hash[:author]).id)
 	end
 end
