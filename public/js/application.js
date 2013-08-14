@@ -13,10 +13,10 @@ function displayQuote(startTime) {
     var quoteChars = quote.length;
     var quoteTime = quoteChars * 120
 
-    if (quoteTime > 25000){
+    if (quoteTime > 15000){
       quoteTime = 25000
-    } else if (quoteTime < 8000) {
-      quoteTime = 8000
+    } else if (quoteTime < 5000) {
+      quoteTime = 5000
     } else {
       quoteTime = quoteChars * 120
     }
