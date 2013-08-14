@@ -86,7 +86,7 @@
   position: relative;
   display: block;
   float: right;
-  margin-top: -40px;
+  /*margin-top: -40px;*/
   margin-right: 20px;
 }
 
@@ -147,8 +147,8 @@ h2 {
 }
 
 #rotating-item-wrapper {
-  width: 980px;
-  height: 347px;
+  width: 80%;
+  height: 50%;
 
 }
 

@@ -13,6 +13,14 @@ function displayQuote(startTime) {
     var quoteChars = quote.length;
     var quoteTime = quoteChars * 120
 
+    if (quoteTime > 25000){
+      quoteTime = 25000
+    } else if (quoteTime < 8000) {
+      quoteTime = 8000
+    } else {
+      quoteTime = quoteChars * 120
+    }
+
     console.log("This quote has " + quoteChars + " characters and will be displayed for " + quoteTime/1000 + "seconds");
 
     var startTime = new Date();
