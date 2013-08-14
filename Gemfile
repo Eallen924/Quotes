@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
 gem 'bcrypt-ruby'
 # PostgreSQL driver
 gem 'pg'
@@ -16,7 +17,6 @@ gem 'activerecord'
 
 gem 'rake'
 
-gem 'awesome_print'
 gem 'shotgun'
 
 gem 'sidekiq'
@@ -24,6 +24,7 @@ gem 'redis'
 
 
 group :test, :development do
+	gem 'awesome_print'
 	gem 'pry'
 	gem 'debugger'
   gem 'faker'
