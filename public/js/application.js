@@ -6,7 +6,7 @@ function displayQuote(startTime) {
   $.get('/quote', function(returnData){
     var $rotator = $('#rotating-item-wrapper');
     $rotator.fadeOut(1500, function() {
-      $rotator.html(returnData).hide().fadeIn(1500);
+      $rotator.html(returnData).stop().fadeIn(1500);
     });
 
     var quote = $(returnData).find('.quote_body').text();
